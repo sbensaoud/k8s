@@ -10,7 +10,7 @@ WORKDIR /tomcat
 
 # INSTALL TOMCAT
 RUN curl http://apache.mirrors.ionfish.org/tomcat/tomcat-8/v8.5.51/bin/apache-tomcat-8.5.51.tar.gz -O && \
-    tar xvzf apache-tomcat-8*tar.gz --strip-components=1 && \
+    tar xvf apache-tomcat-8*tar.gz --strip-components=1 && \
     rm apache-tomcat-*.tar.gz
 #    ln -s /apache-tomcat-8.5.51 /tomcat
 ENV CATALINA_HOME /tomcat
