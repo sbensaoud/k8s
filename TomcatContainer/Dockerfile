@@ -4,7 +4,7 @@ MAINTAINER Samir Ben Saoud (bensaoud.samir@gmail.com)
 
 RUN apk update && apk add unzip openjdk8 iproute2 curl jq
 RUN mkdir -p /run/lock && mkdir -p /tomcat
-ADD user.dat /
+
 
 WORKDIR /tomcat
 
@@ -25,7 +25,7 @@ RUN mkdir /apps
 ADD startup.sh /
 ADD env.sh /
 
-RUN chmod +x /startup.sh && chmod +x /env.sh && rm -f user.dat
+RUN chmod +x /startup.sh && chmod +x /env.sh 
 WORKDIR /
 
 CMD ["/bin/sh","/startup.sh"]
