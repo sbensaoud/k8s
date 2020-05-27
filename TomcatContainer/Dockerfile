@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER Samir Ben Saoud (bensaoud.samir@gmail.com)
 
-RUN apk update && apk add unzip openjdk8 iproute2 curl jq tar
+RUN apk update && apk add unzip openjdk8 iproute2 curl jq tar gzip
 RUN mkdir -p /run/lock && mkdir -p /tomcat
 
 
