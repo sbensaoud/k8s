@@ -32,5 +32,5 @@ WORKDIR /tomcat/bin
 
 CMD ["/bin/sh","/tomcat/bin/startup.sh"]
 
-EXPOSE 80
+EXPOSE 8080
 
