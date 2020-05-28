@@ -18,18 +18,17 @@ WORKDIR /tomcat
 
 ENV CATALINA_HOME /tomcat
 
-RUN rm -Rf /tomcat/conf/server.xml && rm -Rf /tomcat/conf/tomcat-users.xml
-ADD server.xml /tomcat/conf/
+RUN rm -Rf /tomcat/conf/tomcat-users.xml
 ADD tomcat-users.xml /tomcat/conf/
 
 WORKDIR /
 
-RUN mkdir /apps
-ADD startup.sh /
-ADD env.sh /
 
-RUN chmod +x /startup.sh && chmod +x /env.sh 
-WORKDIR /
+#ADD startup.sh /
+#ADD env.sh /
+
+#RUN chmod +x /startup.sh && chmod +x /env.sh 
+WORKDIR /tomcat/bin
 
 CMD ["/bin/sh","/startup.sh"]
 
