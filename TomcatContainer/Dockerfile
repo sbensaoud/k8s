@@ -30,7 +30,7 @@ WORKDIR /
 #RUN chmod +x /startup.sh && chmod +x /env.sh 
 WORKDIR /tomcat/bin
 
-CMD ["/bin/sh","/startup.sh"]
+CMD ["/bin/sh","/tomcat/bin/startup.sh"]
 
 EXPOSE 80
 
