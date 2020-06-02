@@ -6,6 +6,12 @@ RUN mkdir /DBScripts
 
 ADD setup.sql /DBScripts
 ADD cleanup.sql /DBScripts
-ADD setup.sql /DBScripts
+ADD repair.sql /DBScripts
+
+ENV MYSQL_ROOT_PASSWORD rootpass
+
+
+RUN mysql -u root -prootpass < /DBScripts/setup.sql
+RUN mysql -u root -prootpass < /DBScripts/cleanup.sql
 
 EXPOSE 3306
