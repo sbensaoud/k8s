@@ -8,4 +8,3 @@ ADD startup.sh /
 
 
 EXPOSE 8080
-CMD ["startup.sh", "run"]
